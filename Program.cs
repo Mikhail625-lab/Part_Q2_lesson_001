@@ -33,14 +33,18 @@ namespace _001_lesson
 {
     class Program
     {
+        const string infoLesson = " Урок 1. Блок-схемы, асимптотическая сложность, рекурсия";
+        const int WINDOW_MAX_WEIGHT = 150; // X
+        const int WINDOW_MAX_HEIGHT = 40; // Y
+
         static void Main(string[] args)
         {
-
-
+            ConfigureConsole(infoLesson);
+            //Console.ReadKey();
 
             Task001();
-            Task002();
-            Task003();
+            //Task002();
+            //Task003();
 
 
 
@@ -53,9 +57,26 @@ namespace _001_lesson
         static void Task001()
         { // Task № 001
           // block declare init vars
-          // block executive
+            string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
+            string question2 = "";
+            Random rnd1 = new Random();
+
+            int number;
+
+            // block executive
+            Console.ForegroundColor = ConsoleColor.Gray;
+            number = Convert.ToInt32(GetStrFromCons(question1, Convert.ToString(rnd1.Next(10000))));
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+            Console.WriteLine("\n\t Ok \n\t Let's check whether the number is prime ...");
+            if (IsPrimeNumber(number) == true)
+            { Console.WriteLine("\t The number {0} is PRIME", number); }
+            else Console.WriteLine("\t The number {0} is NOT prime", number);
+
+
 
             Console.WriteLine("\n\t\t\t End of Task01");
+            Console.ReadKey();
             // end of  Task № 001
         }
 
@@ -76,9 +97,6 @@ namespace _001_lesson
 
         static bool IsPrimeNumber(int number)
         {
-
-            //Console.WriteLine("Please enter number :");
-            //int number = Convert.ToInt32(Console.ReadLine());
             int d = 0;
             int i;
 
@@ -88,10 +106,114 @@ namespace _001_lesson
                 if (number % i == 0) d++;
             }
 
-            if (d == 0) return true; //   Console.WriteLine("{,3}simple");
-            else return true; //Console.WriteLine("not simple");
+            if (d == 0) return true; //   Console.WriteLine("{,3}prime");
+            else return false;
 
         }
+
+
+        // under
+
+        static void ConfigureConsole(string headerConsWindow)
+        {
+            // Configure console.
+            Console.Title = headerConsWindow;
+            //Если значение TreatControlCAsInput свойства равно false и нажата клавиша CTRL +C, нажатые клавиши не сохраняются во входном буфере, а операционная система завершает выполняющийся процесс. Это значение по умолчанию.
+
+            /*
+             * Console.TreatControlCAsInput = true;
+            Console.SetWindowSize(20, 30);
+            Console.BufferWidth = WINDOW_MAX_WEIGHT;
+            Console.BufferHeight = WINDOW_MAX_HEIGHT; ;
+
+            Console.SetWindowSize(WINDOW_MAX_WEIGHT + 1, WINDOW_MAX_HEIGHT);
+            //Console.WriteLine("now output 150 *");
+            //Console.ReadKey();
+            */
+            /*
+            for (int i = 0; i < 150; i++)
+                Console.Write("*");
+            Console.WriteLine("|");
+            Console.ReadKey();
+
+            */
+
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+        }
+
+        static string GetStrFromCons(string questionForEnterValue, string resultByDef)
+        {
+            string result;
+            if (TestForNullOrEmpty(questionForEnterValue) == true)
+            { questionForEnterValue = "\t Enter value:"; }
+
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("   " + questionForEnterValue);
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.SetCursorPosition( 12, 1);
+            result = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+
+            // check/verife isNull Empty
+            if (TestForNullOrEmpty(result) == true)
+            {
+                result = resultByDef;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("       " + "Not value, set by default: ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(" {0}", result);
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("");
+
+            }
+
+
+            return result;
+        }
+
+        static bool TestForNullOrEmpty(string s)
+        {
+            bool result;
+            result = (s == null || s == string.Empty);
+            return result;
+        }
+        static bool SwitchBool(bool bSw)
+        {
+            if (bSw == true) bSw = false;
+            else bSw = true;
+            return bSw;
+        }
+
+
+
+        static void ClearScr(int countDown, int warningTimer)
+        {
+            bool bWarning = false;
+
+            for (int i = (countDown + 1); i > 0; i--)
+            {
+                System.Threading.Thread.Sleep(1000);
+                if (i == warningTimer) { bWarning = true; }
+                if (bWarning == true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+                else Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("\r         ");
+                Console.Write("\r     [{0}]", i);
+            }
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Clear();
+
+
+
+        }
+
+
+
+
 
 
     } // end of class Programm
