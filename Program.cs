@@ -92,11 +92,15 @@ namespace _001_lesson
         }
 
         static void Task003()
-        { // Task № 002
+        { // Task № 003
           // block declare init vars
 
             string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
             string question2 = "";
+
+            DateTime start = new DateTime();
+            DateTime finish = new DateTime();
+
             Random rnd1 = new Random();
 
             ulong number;
@@ -109,14 +113,17 @@ namespace _001_lesson
 
 
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            //Console.Write("\n\tNow try calculate with recursion");
+
             Console.Write("\n\tNow try calculate");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(" WITHOUT ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(" recursion \n");
+            Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
+            start = DateTime.Now;
             fib1(number);
-
+            finish = DateTime.Now;
+            Console.WriteLine("\t...done                End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
+            Console.WriteLine("\t                  Duration:[{0}]", (finish - start));
 
             Console.ForegroundColor = ConsoleColor.DarkGray;
             //Console.Write("\n\tNow try calculate with recursion");
@@ -124,17 +131,21 @@ namespace _001_lesson
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(" WITH ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write("recursion \n");
+            Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
 
-            ulong i =0;
+            start = DateTime.Now;
+            ulong i = 0;
             do
             {
                 Console.Write("\t{0}\t|", i);
                 Console.WriteLine("\t{0}", fib2(i));
                 i++;
             }
-            while (i<=number);
-            Console.WriteLine("\t     ... done");
+            while (i <= number);
+
+            finish = DateTime.Now;
+            Console.WriteLine("\t  ...done              End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
+            Console.WriteLine("\t                  Duration:[{0}]", (finish - start));
             Console.ReadKey();
 
 
@@ -164,7 +175,7 @@ namespace _001_lesson
 
         static void fib1(ulong number) // No recurtion
         {
-             
+
             ulong position1 = 0;
             ulong position2 = 1;
             ulong rslt;
@@ -188,7 +199,7 @@ namespace _001_lesson
         static ulong fib2(ulong number)
 
         {
-            return  number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
+            return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
         }
 
 
