@@ -1,6 +1,6 @@
 ﻿
 /*
-ver: 0.1a date: 2021.07.29
+ver: 3.1b date: 2021.07.29
 autor: Mikhail625@protonmail.com
 
                 Tip: for formatting Ctrl + K, а затем Ctrl + D.
@@ -33,12 +33,13 @@ namespace _001_lesson
 {
     class Program
     {
-        const string infoLesson = " Урок 1. Блок-схемы, асимптотическая сложность, рекурсия";
-        const string lineAstrx = "**********************";
-        const string lineDefis = "--------------------------";
+
         const int WINDOW_MAX_WEIGHT = 150; // X
         const int WINDOW_MAX_HEIGHT = 40; // Y
 
+        const string infoLesson = " Урок 1. Блок-схемы, асимптотическая сложность, рекурсия";
+        const string lineAstrx = "**********************";
+        const string lineDefis = "--------------------------";
 
         static void Main(string[] args)
         {
@@ -46,12 +47,8 @@ namespace _001_lesson
             //Console.ReadKey();
 
             Task001();
-            //Task002();
-            //Task003();
-
-
-
-
+            Task002();
+            Task003();
 
 
         } // end of Main()
@@ -81,9 +78,12 @@ namespace _001_lesson
 
 
 
-            Console.WriteLine("\n\t\t\t End of Task01");
-            Console.ReadKey();
+
             // end of  Task № 001
+            Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);
+            Console.ReadKey();
+            ClearScr(5, 3);
+
         }
 
 
@@ -97,10 +97,27 @@ namespace _001_lesson
         static void Task003()
         { // Task № 002
           // block declare init vars
-          // block executive
-          // end of  Task № 002
-        }
 
+            string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
+            string question2 = "";
+            Random rnd1 = new Random();
+
+            int number;
+
+            // block executive
+            Console.WriteLine("\t{0,5}   Task003   {0}", lineDefis);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            number = Convert.ToInt32(GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+            fib1(number);
+
+            // end of  Task № 003
+            Console.WriteLine("\t{0} End of Task003 {0}", lineDefis);
+            Console.ReadKey();
+            ClearScr(5, 3);
+        }
+        // for Task 001
         static bool IsPrimeNumber(int number)
         {
             int d = 0;
@@ -116,6 +133,31 @@ namespace _001_lesson
             else return false;
 
         }
+
+        // for Task 003 
+
+        static void fib1(int number) // No recurtion
+        {
+            int position1 = 0;
+            int position2 = 1;
+            int rslt;
+            for (int i = 0; i <= number; i++)
+            {
+                if (number <= 1)
+                {
+                    Console.WriteLine("\t{0}\t|\t{1}", i, position1);
+                    continue;
+                }
+                else
+                {
+                    rslt = position1;
+                    Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
+                    position1 = position2;
+                    position2 = position2 +rslt;
+                }
+            }
+        }
+
 
 
         // under
