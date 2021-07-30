@@ -82,7 +82,7 @@ namespace _001_lesson
             // end of  Task № 001
             Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);
             Console.ReadKey();
-            ClearScr(5, 3);
+            ClearScr(4, 2);
 
         }
 
@@ -102,20 +102,49 @@ namespace _001_lesson
             string question2 = "";
             Random rnd1 = new Random();
 
-            int number;
+            ulong number;
 
             // block executive
             Console.WriteLine("\t{0,5}   Task003   {0}", lineDefis);
             Console.ForegroundColor = ConsoleColor.Gray;
-            number = Convert.ToInt32(GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
+            number = Convert.ToUInt64(GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
             Console.ForegroundColor = ConsoleColor.Gray;
 
+
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            //Console.Write("\n\tNow try calculate with recursion");
+            Console.Write("\n\tNow try calculate");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(" WITHOUT ");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(" recursion \n");
             fib1(number);
+
+
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            //Console.Write("\n\tNow try calculate with recursion");
+            Console.Write("\n\tNow try calculate");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(" WITH ");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("recursion \n");
+
+            ulong i =0;
+            do
+            {
+                Console.Write("\t{0}\t|", i);
+                Console.WriteLine("\t{0}", fib2(i));
+                i++;
+            }
+            while (i<=number);
+            Console.WriteLine("\t     ... done");
+            Console.ReadKey();
+
 
             // end of  Task № 003
             Console.WriteLine("\t{0} End of Task003 {0}", lineDefis);
             Console.ReadKey();
-            ClearScr(5, 3);
+            ClearScr(4, 2);
         }
         // for Task 001
         static bool IsPrimeNumber(int number)
@@ -136,12 +165,13 @@ namespace _001_lesson
 
         // for Task 003 
 
-        static void fib1(int number) // No recurtion
+        static void fib1(ulong number) // No recurtion
         {
-            int position1 = 0;
-            int position2 = 1;
-            int rslt;
-            for (int i = 0; i <= number; i++)
+             
+            ulong position1 = 0;
+            ulong position2 = 1;
+            ulong rslt;
+            for (ulong i = 0; i <= number; i++)
             {
                 if (number <= 1)
                 {
@@ -153,11 +183,16 @@ namespace _001_lesson
                     rslt = position1;
                     Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
                     position1 = position2;
-                    position2 = position2 +rslt;
+                    position2 = position2 + rslt;
                 }
             }
         }
 
+        static ulong fib2(ulong number)
+
+        {
+            return  number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
+        }
 
 
         // under
