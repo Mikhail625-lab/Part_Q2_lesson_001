@@ -76,13 +76,10 @@ namespace _001_lesson
             { Console.WriteLine("\t The number {0} is PRIME", number); }
             else Console.WriteLine("\t The number {0} is NOT prime", number);
 
-
-
-
             // end of  Task № 001
             Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);
-            Console.ReadKey();
-            ClearScr(4, 2);
+            //Console.ReadKey();
+            ClearScr(5, 3);
 
         }
 
