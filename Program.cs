@@ -34,8 +34,11 @@ namespace _001_lesson
     class Program
     {
         const string infoLesson = " Урок 1. Блок-схемы, асимптотическая сложность, рекурсия";
+        const string lineAstrx = "**********************";
+        const string lineDefis = "--------------------------";
         const int WINDOW_MAX_WEIGHT = 150; // X
         const int WINDOW_MAX_HEIGHT = 40; // Y
+
 
         static void Main(string[] args)
         {
@@ -57,6 +60,7 @@ namespace _001_lesson
         static void Task001()
         { // Task № 001
           // block declare init vars
+
             string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
             string question2 = "";
             Random rnd1 = new Random();
@@ -64,11 +68,13 @@ namespace _001_lesson
             int number;
 
             // block executive
+            Console.WriteLine("\t{0,5}   Task001   {0}", lineDefis);
             Console.ForegroundColor = ConsoleColor.Gray;
             number = Convert.ToInt32(GetStrFromCons(question1, Convert.ToString(rnd1.Next(10000))));
             Console.ForegroundColor = ConsoleColor.Gray;
 
-            Console.WriteLine("\n\t Ok \n\t Let's check whether the number is prime ...");
+
+            Console.WriteLine("\n\t Ok . Let's check whether the number is prime ...");
             if (IsPrimeNumber(number) == true)
             { Console.WriteLine("\t The number {0} is PRIME", number); }
             else Console.WriteLine("\t The number {0} is NOT prime", number);
@@ -152,7 +158,7 @@ namespace _001_lesson
             Console.WriteLine("   " + questionForEnterValue);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.SetCursorPosition( 12, 1);
+            Console.SetCursorPosition(12, 2);
             result = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkGray;
 
@@ -161,7 +167,7 @@ namespace _001_lesson
             {
                 result = resultByDef;
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.Write("       " + "Not value, set by default: ");
+                Console.Write("\t Not value, set by default := ");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(" {0}", result);
                 Console.ForegroundColor = ConsoleColor.Gray;
