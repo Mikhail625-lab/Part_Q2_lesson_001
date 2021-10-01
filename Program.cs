@@ -324,8 +324,8 @@ namespace _001_lesson
     class UTest
     {
         public bool IsPrime (int digit)
-        {              
-        var [] setPrime =  new SortedSet<int> {
+        {     
+        SortedSet<int> setPrime =  new SortedSet<int> {
                     2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,
                     127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,
                     233,239,241,251,257,263,269,271,277,281,283,293,307,311,313,317,331,337,347,349,
@@ -1270,8 +1270,7 @@ namespace _001_lesson
         
         // end of arrray
         bool e = true; //Array.Exists (arrPrime , digit);
-            Console.WriteLine ("  arrPrime.Lenth =[{0}]" ,arrPrime.Length ); 
-
+            Console.WriteLine ("  setPrime.Count =[{0}]" , setPrime.Count  ); 
 
         if ( e ==true) return true;
         else return false;     
