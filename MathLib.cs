@@ -25,13 +25,13 @@ namespace _001_lesson
 
         // for Task 003 
 
-        public void fib1(ulong number) // No recurtion
+        public void fib1(int number) // No recurtion
         {
 
             ulong position1 = 0;
             ulong position2 = 1;
             ulong rslt;
-            for (ulong i = 0; i <= number; i++)
+            for (int i = 0; i <= number; i++)
             {
                 if (number <= 1)
                 {
@@ -48,10 +48,13 @@ namespace _001_lesson
             }
         }
 
-        public ulong fib2(ulong number)
+        public ulong fib2(int number)
 
         {
-            return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
+            ulong r = number > 1 ? (ulong)(fib2(number - 1) + fib2(number - 2) ): (ulong)number;
+            return (ulong)r; 
+
+           // return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
         }
 
 

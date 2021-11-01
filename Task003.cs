@@ -14,19 +14,21 @@ namespace _001_lesson
 
             string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
             string question2 = "";
+            string resultUTest="";
 
             MathLib ml1 = new MathLib();
             ConsWindow cw1 = new ConsWindow();
             InOut io1 = new InOut();
+            UTest ut1 = new UTest();
 
             DateTime start = new DateTime(); DateTime finish = new DateTime();
             Random rnd1 = new Random();
-            ulong number;
+            int number;
 
             // block executive
             Console.WriteLine("\t{0,5}   Task003   {0}", ConsWindow.lineDefis);
             Console.ForegroundColor = ConsoleColor.Gray;
-            number = Convert.ToUInt64(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
+            number = Convert.ToInt32(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
             Console.ForegroundColor = ConsoleColor.Gray;
 
 
@@ -52,12 +54,19 @@ namespace _001_lesson
             Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
 
             start = DateTime.Now;
-            ulong i = 0;
+            int i = 1; 
+            ulong calcFib; 
             do
             {
-                Console.Write("\t{0}\t|", i);
-                Console.WriteLine("\t{0}", ml1.fib2(i));
                 i++;
+                calcFib = ml1.fib2 (i);
+                if (ut1.IsFib(i, calcFib) == true)
+                    { resultUTest = "UTest:OK";} 
+                else { resultUTest =  "UTest:Failed";}
+
+                Console.Write("\t{0}\t|", i);
+                Console.WriteLine("\t{0}\t\t | \t\t{1}", calcFib , resultUTest  );
+                
             }
             while (i <= number);
 

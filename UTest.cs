@@ -958,13 +958,14 @@ namespace _001_lesson
         } // end of isPrime
 
 
-        public bool IsFib(int digit)
+        public bool IsFib(int digit , ulong calc)
         {
             string msg1 ="\t\tN-ый член должен быть больше чем 1";
             bool exst = false;
             if (digit<1)
             { Console.WriteLine(msg1);
             return false;}
+
             List<ulong> listFib = new List<ulong>
         {
             0, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765,
@@ -1007,7 +1008,13 @@ namespace _001_lesson
              */
 }
                     ;
-            return (listFib.Contains((ulong)digit)? exst=true:exst=false);
+            if (listFib[digit]==calc)
+            { 
+            return true;
+            }
+            else { return false;}
+
+            //return (listFib.Contains((ulong)digit)? exst=true:exst=false);
 
         }
     }// end of  class UTest
