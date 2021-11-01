@@ -16,6 +16,7 @@ namespace _001_lesson
         public const string infoLesson = " Урок 1. Блок-схемы, асимптотическая сложность, рекурсия";
         public const string lineAstrx = "**********************";
         public const string lineDefis = "--------------------------";
+
         static void ConfigureConsole(string headerConsWindow)
         {
             // Configure console.
@@ -68,6 +69,37 @@ namespace _001_lesson
 
 
 
+        }
+
+        public void TaskInfo()
+        {
+        string taskInfo1 ;
+        string taskInfo2 ;
+        string taskInfo3 ;
+        StringBuilder sb1 = new StringBuilder();
+        sb1.Append ( "\t\t[ 1. ] Требуется реализовать на C# функцию согласно блок-схеме.");
+        sb1.Append ( "\n\t\tБлок-схема описывает алгоритм проверки, простое число или нет.");
+        sb1.Append ( "\n\t\tАлгоритм реализовать отдельно в функции согласно блок-схеме.");
+        sb1.Append ( "\n\t\tНаписать проверочный код в main функции .\n\t\tКод выложить на GitHub.");
+        sb1.Append ( "\n\t\t                     ");
+        taskInfo1 = sb1.ToString();
+        sb1.Clear();
+
+        sb1.Append ( "\t\t[ 2. ]  Посчитайте сложность функции");
+                    sb1.Append ( "\n\t\t                     ");
+        taskInfo2=sb1.ToString();
+        sb1.Clear();
+
+        sb1.Append ( "\t\t[ 3. ]  Реализуйте функцию вычисления числа Фибоначчи");
+        sb1.Append ( "\n\t\tТребуется реализовать рекурсивную версию и версию без рекурсии (через цикл).");
+                    sb1.Append ( "\n\t\t.............................................................................");
+        taskInfo3=sb1.ToString();
+        sb1.Clear();
+        
+             Console.WriteLine("                ................................... begin ................................... ");
+        Console.WriteLine(taskInfo1);
+        Console.WriteLine(taskInfo2);
+        Console.WriteLine(taskInfo3);
         }
 
     }

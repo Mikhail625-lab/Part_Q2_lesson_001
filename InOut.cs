@@ -14,10 +14,10 @@ namespace _001_lesson
         {
             int result = 0;
             string textQuetionByDef = "\t\tEnter value and press [Enter]:";
-            var valueByDef = "2";
-            textQuestion = string.IsNullOrEmpty(textQuestion) == true ? textQuetionByDef : textQuestion;
+            var valueByDef = "1";
+            string textQstn = string.IsNullOrEmpty(textQuestion) == true ? textQuetionByDef : textQuestion;
             // Запрос на ввод значения . 
-            Console.WriteLine("   " + textQuestion);
+            Console.WriteLine("\t\t\t\t{0}" , textQuestion);
             var inputValue = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkGray;
             //Console.ForegroundColor = ConsoleColor.DarkYellow;

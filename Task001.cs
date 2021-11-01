@@ -53,9 +53,9 @@ namespace _001_lesson
 
             // end of  Task № 001
             Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);
-            Console.ReadKey();
+            //Console.ReadKey();
             
-            cw1.ClearScr(7, 3);
+            cw1.ClearScr(11, 3);
             Console.Clear();
             d1.Run("T1");
         }

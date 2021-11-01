@@ -38,7 +38,7 @@ namespace _001_lesson
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("                ............... begin ............... ");
+           
             Dispatcher d1 = new Dispatcher();
             d1.Run("T1");
         } // end of Main()
