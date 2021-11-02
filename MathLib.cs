@@ -25,38 +25,51 @@ namespace _001_lesson
 
         // for Task 003 
 
-        public void fib1(int number) // No recurtion
+        public void fib1(int number) // No/withiuot recurtion
         {
 
             ulong position1 = 0;
             ulong position2 = 1;
             ulong rslt;
 
-            string msg1 ="\t\tN-ый член должен быть больше чем 1";
+            string msg1 = "\t\tN-ый член должен быть больше чем 1";
 
-            if (number<1)
-            { Console.WriteLine(msg1);
-            return;}
-
-            for (int i = 0; i <= number; i++)
+            if (number < 1)
             {
+                Console.WriteLine(msg1);
+                return;
+            }
+
+            {
+                UTest ut1 = new UTest();
+                string resultUTest;
+                for (int i = 0; i <= number; i++)
+                {
+
                     rslt = position1;
-                    if (i<2)Console.WriteLine("\t{0}\t|\t{1}", i, i);
-                    if (i>1)     Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
+                    if (i < 2) Console.WriteLine("\t{0}\t|\t{1}", i, i );
+                    if (i > 1)
+                    {
+                        if (ut1.IsFib(i, (ulong)rslt) == true)
+                        { resultUTest = "UTest:OK"; }
+                        else { resultUTest = "UTest:Failed"; }
+                        Console.WriteLine("\t{0}\t|\t{1}\t | {2}", i, rslt , resultUTest);
+                    }
                     position1 = position2;
                     position2 = position2 + rslt;
-               
-                
+
+
+                }
             }
         }
 
-        public ulong fib2(int number)
+        public ulong fib2(int number) // With recurtion
 
         {
-            ulong r = number > 1 ? (ulong)(fib2(number - 1) + fib2(number - 2) ): (ulong)number;
-            return (ulong)r; 
+            ulong r = number > 1 ? (ulong)(fib2(number - 1) + fib2(number - 2)) : (ulong)number;
+            return (ulong)r;
 
-           // return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
+            // return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
         }
 
 

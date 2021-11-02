@@ -8,13 +8,13 @@ namespace _001_lesson
 {
     class Task003
     {
-        public void Task003Sol ()
+        public void Task003Sol()
         { // Task № 003
           // block declare init vars
 
             string question1 = "\t Please, enter a number or press [Enter] key for random generate \n\t :=";
             string question2 = "";
-            string resultUTest="";
+            string resultUTest = "";
 
             MathLib ml1 = new MathLib();
             ConsWindow cw1 = new ConsWindow();
@@ -40,9 +40,11 @@ namespace _001_lesson
             Console.Write(" WITHOUT ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
+
             start = DateTime.Now;
             ml1.fib1(number);
             finish = DateTime.Now;
+
             Console.WriteLine("\t...done                End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
             Console.WriteLine("\t                  Duration:[{0}]", (finish - start));
 
@@ -55,19 +57,27 @@ namespace _001_lesson
             Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
 
             start = DateTime.Now;
-            int i = 1; 
-            ulong calcFib; 
+            int i = 0;
+            ulong calcFib;
             do
             {
-                i++;
-                calcFib = ml1.fib2 (i);
+                calcFib = ml1.fib2(i);
                 if (ut1.IsFib(i, calcFib) == true)
-                    { resultUTest = "UTest:OK";} 
-                else { resultUTest =  "UTest:Failed";}
+                { resultUTest = "UTest:OK"; }
+                else { resultUTest = "UTest:Failed"; }
 
-                Console.Write("\t{0}\t|", i);
-                Console.WriteLine("\t{0}\t\t | \t\t{1}", calcFib , resultUTest  );
-                
+                if (i < 2)
+                {
+                    Console.Write("\t{0}\t|", i);
+                    Console.WriteLine("\t{0}\t\t | ", calcFib);
+                }
+
+                if (i > 1)
+                {
+                    Console.Write("\t{0}\t|", i);
+                    Console.WriteLine("\t{0}\t\t | \t\t{1}", calcFib, resultUTest);
+                }
+                i++;
             }
             while (i <= number);
 
