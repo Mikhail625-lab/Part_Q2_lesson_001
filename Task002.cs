@@ -19,10 +19,7 @@ namespace _001_lesson
             Console.WriteLine(answ);
             //Console.WriteLine("\t\tAnd press any key for continue ...");
             //Console.ReadKey();
-
-            cw1.ClearScr(11, 3);
-            Console.Clear();
-            d1.Run("T1");
+            d1.EndTask();
 
         }
 

@@ -52,8 +52,10 @@ namespace _001_lesson
             string result;
             if (string.IsNullOrEmpty(questionForEnterValue) == true)
             { questionForEnterValue = "\t Enter value:"; }
-            Console.ForegroundColor = ConsoleColor.DarkGray; Console.WriteLine("   " + questionForEnterValue);
-            Console.ForegroundColor = ConsoleColor.DarkGreen; Console.SetCursorPosition(12, 2);
+            Console.ForegroundColor = ConsoleColor.DarkGray; 
+            Console.WriteLine("   " + questionForEnterValue);
+            Console.ForegroundColor = ConsoleColor.DarkGreen; 
+            Console.SetCursorPosition(12, 19);
             result = Console.ReadLine(); Console.ForegroundColor = ConsoleColor.DarkGray;
 
             // check/verife isNull Empty

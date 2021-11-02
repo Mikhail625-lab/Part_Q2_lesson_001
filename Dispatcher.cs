@@ -56,6 +56,13 @@ namespace _001_lesson
             } while (i == 0);
         } // enf_of_Run
 
+        public void EndTask ()
+        { 
+            ConsWindow cw1 = new ConsWindow();
+            cw1.ClearScr(11, 3);
+            Console.Clear();
+            this.Run("");
+        } // public_void_EndTask ()
     }// end_of_class_Dispatcher
 
 

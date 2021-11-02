@@ -31,20 +31,20 @@ namespace _001_lesson
             ulong position1 = 0;
             ulong position2 = 1;
             ulong rslt;
-            for (int i = 0; i <= number; i++)
+
+            string msg1 ="\t\tN-ый член должен быть больше чем 1";
+
+            if (number<1)
+            { Console.WriteLine(msg1);
+            return;}
+
+            for (int i = 2; i <= number; i++)
             {
-                if (number <= 1)
-                {
-                    Console.WriteLine("\t{0}\t|\t{1}", i, position1);
-                    continue;
-                }
-                else
-                {
                     rslt = position1;
                     Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
                     position1 = position2;
                     position2 = position2 + rslt;
-                }
+                
             }
         }
 

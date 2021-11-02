@@ -18,6 +18,7 @@ namespace _001_lesson
 
             MathLib ml1 = new MathLib();
             ConsWindow cw1 = new ConsWindow();
+            Dispatcher d1 = new Dispatcher();
             InOut io1 = new InOut();
             UTest ut1 = new UTest();
 
@@ -71,15 +72,15 @@ namespace _001_lesson
             while (i <= number);
 
             finish = DateTime.Now;
-            Console.WriteLine("\t  ...done              End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
-            Console.WriteLine("\t                  Duration:[{0}]", (finish - start));
+            Console.WriteLine("\t\t  ...done              End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
+            Console.WriteLine("\t\t                  Duration:[{0}]", (finish - start));
             Console.ReadKey();
 
 
             // end of  Task № 003
             Console.WriteLine("\t{0} End of Task003 {0}", ConsWindow.lineDefis);
             Console.ReadKey();
-            cw1.ClearScr(4, 2);
+            d1.EndTask();
         }
         // for Task 001
     }
