@@ -38,12 +38,14 @@ namespace _001_lesson
             { Console.WriteLine(msg1);
             return;}
 
-            for (int i = 2; i <= number; i++)
+            for (int i = 0; i <= number; i++)
             {
                     rslt = position1;
-                    Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
+                    if (i<2)Console.WriteLine("\t{0}\t|\t{1}", i, i);
+                    if (i>1)     Console.WriteLine("\t{0}\t|\t{1}", i, rslt);
                     position1 = position2;
                     position2 = position2 + rslt;
+               
                 
             }
         }
