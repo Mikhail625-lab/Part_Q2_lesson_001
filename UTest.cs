@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Numerics;
 
 namespace _001_lesson
 {
@@ -956,7 +952,6 @@ namespace _001_lesson
             return (setPrime.Contains(digit)? exst=true:exst=false);
 
         } // end of isPrime
-
 
         public bool IsFib(int digit , ulong calc)
         {
