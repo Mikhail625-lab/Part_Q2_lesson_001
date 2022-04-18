@@ -18,32 +18,16 @@ autor: Mikhail625@protonmail.com
 3.  Реализуйте функцию вычисления числа Фибоначчи
 Требуется реализовать рекурсивную версию и версию без рекурсии (через цикл).
 
-
-
- 
  */
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.Numerics;
-
-
 namespace _001_lesson
 {
     class Program
     {
         static void Main(string[] args)
-        {
-           
+        {          
             Dispatcher d1 = new Dispatcher();
             d1.Run("T1");
         } // end of Main()
-
     } // end of class Programm
-
 } // end of name of space
 
