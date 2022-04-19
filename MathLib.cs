@@ -21,19 +21,19 @@ namespace Q2_Lesson_001
 
         // for Task 003 
 
-        public void GetFibNoRecurtion(int number) // No/withiuot recurtion
+        public ulong   GetFibNoRecurtion(int number) // No/withiuot recurtion
         {
 
             ulong position1 = 0;
             ulong position2 = 1;
-            ulong rslt;
+            ulong rslt =0;
 
             string msg1 = "\t\tN-ый член должен быть больше чем 1";
 
             if (number < 1)
             {
                 Console.WriteLine(msg1);
-                return;
+                return rslt;
             }
 
             {
@@ -56,14 +56,16 @@ namespace Q2_Lesson_001
 
 
                 }
+                return rslt;
             }
+
         }
 
         public ulong GetFibRecurtion(int number) // With recurtion
 
         {
-            ulong r = number > 1 ? (ulong)(GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2)) : (ulong)number;
-            return (ulong)r;
+            ulong rslt = number > 1 ? (ulong)(GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2)) : (ulong)number;
+            return (ulong)rslt;
 
             // return number > 1 ? GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2) : number;
         }
