@@ -67,7 +67,6 @@ namespace Q2_Lesson_001
             ulong rslt = number > 1 ? (ulong)(GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2)) : (ulong)number;
             return (ulong)rslt;
 
-            // return number > 1 ? GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2) : number;
         }
 
 
