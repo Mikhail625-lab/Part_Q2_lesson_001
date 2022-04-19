@@ -10,7 +10,7 @@ namespace Q2_Lesson_001
             Dispatcher d1 = new Dispatcher();
 
             string codeSource =                 "";
-            string answ = "\t\tАсимптотическая сложность StrangeSum(int[] inputArray)\n\t\tO(n^3) ";
+            string answ = "\t\tАсимптотическая сложность :\n\t\tO(n^3) ";
 
             Console.WriteLine(answ);
             //Console.WriteLine("\t\tAnd press any key for continue ...");

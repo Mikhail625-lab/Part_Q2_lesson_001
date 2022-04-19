@@ -17,11 +17,8 @@ namespace Q2_Lesson_001
             // arange // (подготовка)
             int x = 0; ulong expected = 0;
             MathLib sut = new MathLib(); // sut (System Under Test) video from YouTube  "Unit-тестирование (основы часть 2 )" by Sergei Calabonga 
-
             // act // (действие) 
-
             ulong actual = sut.GetFibNoRecurtion(x);
-
             // assert // (проверка)
             Assert.AreEqual(expected, actual);
 

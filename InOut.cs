@@ -14,6 +14,7 @@ namespace Q2_Lesson_001
             string textQstn = string.IsNullOrEmpty(textQuestion) == true ? textQuetionByDef : textQuestion;
             // Запрос на ввод значения . 
             Console.WriteLine("\t\t\t\t{0}" , textQuestion);
+
             var inputValue = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkGray;
             //Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -43,7 +44,7 @@ namespace Q2_Lesson_001
             return result;
         }//end_of_GetValueFromConsole
 
-        public string GetStrFromCons(string questionForEnterValue, string resultByDef)
+        public string GetStrFromCons(string questionForEnterValue, string resultByDef , int y , int x)
         {
             string result;
             if (string.IsNullOrEmpty(questionForEnterValue) == true)
@@ -51,7 +52,7 @@ namespace Q2_Lesson_001
             Console.ForegroundColor = ConsoleColor.DarkGray; 
             Console.WriteLine("   " + questionForEnterValue);
             Console.ForegroundColor = ConsoleColor.DarkGreen; 
-            Console.SetCursorPosition(12, 19);
+            Console.SetCursorPosition(y, x);
             result = Console.ReadLine(); Console.ForegroundColor = ConsoleColor.DarkGray;
 
             // check/verife isNull Empty

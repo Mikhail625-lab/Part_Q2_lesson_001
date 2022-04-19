@@ -6,10 +6,7 @@ namespace Q2_Lesson_001
     class Task001
     {
         public  void Task001Sol()
-
         {
-
-
             // Task № 001
             // block declare init vars
 
@@ -20,7 +17,7 @@ namespace Q2_Lesson_001
             ConsWindow cw1 = new ConsWindow();
             InOut io1 = new InOut();
             MathLib ml1 = new MathLib();
-            UTest ut = new UTest();
+
             Dispatcher d1 = new Dispatcher();
     
             int number;
@@ -31,7 +28,7 @@ namespace Q2_Lesson_001
             Console.Clear();
             Console.WriteLine("\t{0,5}   Task001   {0}", lineDefis); 
             Console.ForegroundColor = ConsoleColor.Gray;
-            number = Convert.ToInt32(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(10000)))); 
+            number = Convert.ToInt32(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(10000)) , 11,2)); 
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\n\t Ok . Let's check whether the number is prime ...");
 
@@ -42,10 +39,6 @@ namespace Q2_Lesson_001
             // testing results 
 
             Console.WriteLine("\n\t Press [Enter] key for run UTesting...");
-
-            if (ut.IsPrime(number) == true)
-            { Console.WriteLine("\t The number {0} is PRIME", number); }
-            else Console.WriteLine("\t The number {0} is NOT prime", number);
 
             // end of  Task № 001
             Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);

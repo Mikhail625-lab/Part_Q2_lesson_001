@@ -16,7 +16,6 @@ namespace Q2_Lesson_001
             ConsWindow cw1 = new ConsWindow();
             Dispatcher d1 = new Dispatcher();
             InOut io1 = new InOut();
-            UTest ut1 = new UTest();
 
             DateTime start = new DateTime(); DateTime finish = new DateTime();
             Random rnd1 = new Random();
@@ -25,7 +24,7 @@ namespace Q2_Lesson_001
             // block executive
             Console.WriteLine("\t{0,5}   Task003   {0}", ConsWindow.lineDefis);
             Console.ForegroundColor = ConsoleColor.Gray;
-            number = Convert.ToInt32(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(30))));
+            number = Convert.ToInt32(io1.GetStrFromCons(question1, Convert.ToString(rnd1.Next(30)) ,12,19));
             Console.ForegroundColor = ConsoleColor.Gray;
 
 

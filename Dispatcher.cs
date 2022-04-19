@@ -30,7 +30,10 @@ namespace Q2_Lesson_001
             int i = 1;
             do
             {
+               
                 Console.WriteLine(question1, i);
+               Console.SetCursorPosition(52, 14);
+
                 i = io1.GetValueFromConsole("");
 
                 switch (i)
@@ -54,9 +57,12 @@ namespace Q2_Lesson_001
         } // enf_of_Run
 
         public void EndTask ()
-        { 
+        {
+
+            int count = 5;
+            int warningCount = 2; 
             ConsWindow cw1 = new ConsWindow();
-            cw1.ClearScr(11, 3);
+            cw1.ClearScr(count, warningCount);
             Console.Clear();
             this.Run("");
         } // public_void_EndTask ()
