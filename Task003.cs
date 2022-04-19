@@ -37,6 +37,7 @@ namespace Q2_Lesson_001
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
 
+            // calculate Fibonachi WITHOUT recurtion
             start = DateTime.Now;
             ml1.GetFibNoRecurtion(number);
             finish = DateTime.Now;
@@ -44,8 +45,8 @@ namespace Q2_Lesson_001
             Console.WriteLine("\t...done                End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
             Console.WriteLine("\t                  Duration:[{0}]", (finish - start));
 
+            // calculate Fibonachi WITH recurtion
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            //Console.Write("\n\tNow try calculate with recursion");
             Console.Write("\n\tNow try calculate");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(" WITH ");
@@ -58,10 +59,12 @@ namespace Q2_Lesson_001
             do
             {
                 calcFib = ml1.GetFibRecurtion(i);
+                /*
                 if (ut1.IsFib(i, calcFib) == true)
                 { resultUTest = "UTest:OK"; }
                 else { resultUTest = "UTest:Failed"; }
-
+                */
+                /*
                 if (i < 2)
                 {
                     Console.Write("\t{0}\t|", i);
@@ -73,6 +76,9 @@ namespace Q2_Lesson_001
                     Console.Write("\t{0}\t|", i);
                     Console.WriteLine("\t{0}\t\t | \t\t{1}", calcFib, resultUTest);
                 }
+                */
+                Console.Write("\t{0}\t|", i);
+                Console.WriteLine("\t{0}\t\t | ", calcFib);
                 i++;
             }
             while (i <= number);

@@ -37,8 +37,9 @@ namespace Q2_Lesson_001
             }
 
             {
-                UTest ut1 = new UTest();
-                string resultUTest;
+                //UTest ut1 = new UTest();
+                //string resultUTest;
+
                 for (int i = 0; i <= number; i++)
                 {
 
@@ -46,10 +47,13 @@ namespace Q2_Lesson_001
                     if (i < 2) Console.WriteLine("\t{0}\t|\t{1}", i, i );
                     if (i > 1)
                     {
+                        /*
                         if (ut1.IsFib(i, (ulong)rslt) == true)
                         { resultUTest = "UTest:OK"; }
                         else { resultUTest = "UTest:Failed"; }
                         Console.WriteLine("\t{0}\t|\t{1}\t | {2}", i, rslt , resultUTest);
+                        */
+                        Console.WriteLine("\t{0}\t|\t{1}\t |", i, rslt);
                     }
                     position1 = position2;
                     position2 = position2 + rslt;
