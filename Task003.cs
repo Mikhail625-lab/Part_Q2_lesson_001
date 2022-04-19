@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _001_lesson
+namespace Q2_Lesson_001
 {
     class Task003
     {
@@ -38,7 +38,7 @@ namespace _001_lesson
             Console.Write(" recursion   Start:[{0}]\n", DateTime.Now.ToString("HH:mm:ss"));
 
             start = DateTime.Now;
-            ml1.fib1(number);
+            ml1.GetFibNoRecurtion(number);
             finish = DateTime.Now;
 
             Console.WriteLine("\t...done                End:[{0}]", DateTime.Now.ToString("HH: mm:ss"));//Subtract 
@@ -57,7 +57,7 @@ namespace _001_lesson
             ulong calcFib;
             do
             {
-                calcFib = ml1.fib2(i);
+                calcFib = ml1.GetFibRecurtion(i);
                 if (ut1.IsFib(i, calcFib) == true)
                 { resultUTest = "UTest:OK"; }
                 else { resultUTest = "UTest:Failed"; }

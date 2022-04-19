@@ -19,7 +19,7 @@ autor: Mikhail625@protonmail.com
 Требуется реализовать рекурсивную версию и версию без рекурсии (через цикл).
 
  */
-namespace _001_lesson
+namespace Q2_Lesson_001
 {
     class Program
     {

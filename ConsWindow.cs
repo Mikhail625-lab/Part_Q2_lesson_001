@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace _001_lesson
+namespace Q2_Lesson_001
 {
     class ConsWindow
     {

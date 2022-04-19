@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _001_lesson
+namespace Q2_Lesson_001
 {
     public class MathLib
     {
@@ -21,7 +21,7 @@ namespace _001_lesson
 
         // for Task 003 
 
-        public void fib1(int number) // No/withiuot recurtion
+        public void GetFibNoRecurtion(int number) // No/withiuot recurtion
         {
 
             ulong position1 = 0;
@@ -59,13 +59,13 @@ namespace _001_lesson
             }
         }
 
-        public ulong fib2(int number) // With recurtion
+        public ulong GetFibRecurtion(int number) // With recurtion
 
         {
-            ulong r = number > 1 ? (ulong)(fib2(number - 1) + fib2(number - 2)) : (ulong)number;
+            ulong r = number > 1 ? (ulong)(GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2)) : (ulong)number;
             return (ulong)r;
 
-            // return number > 1 ? fib2(number - 1) + fib2(number - 2) : number;
+            // return number > 1 ? GetFibRecurtion(number - 1) + GetFibRecurtion(number - 2) : number;
         }
 
 

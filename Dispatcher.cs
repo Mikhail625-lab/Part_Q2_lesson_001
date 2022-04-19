@@ -3,7 +3,7 @@
 
 
 
-namespace _001_lesson
+namespace Q2_Lesson_001
 {
     //    internal class Dispatcher
 
