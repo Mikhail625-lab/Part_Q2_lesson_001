@@ -45,17 +45,11 @@ namespace Q2_Lesson_001
 
         public void ClearScr(int countDown, int warningTimer)
         {
-            bool bWarning = false;
-
             for (int i = (countDown + 1); i > 0; i--)
             {
                 System.Threading.Thread.Sleep(1000);
-                if (i == warningTimer) { bWarning = true; }
-                if (bWarning == true)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                }
-                else Console.ForegroundColor = ConsoleColor.Gray;
+                if (i == warningTimer) { Console.ForegroundColor = ConsoleColor.Red; }
+
                 Console.Write("\r         ");
                 Console.Write("\r     [{0}]", i);
             }

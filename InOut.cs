@@ -6,15 +6,23 @@ namespace Q2_Lesson_001
 
     class InOut
     {
-        public int GetValueFromConsole(string textQuestion)
+        /// <summary>
+        /// Получить числовое значение из консоли (ввод данных с консоли)
+        /// </summary>
+        /// <param name="textQuestion"></param>
+        /// <param name="y"></param>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public int GetValueFromConsole(string textQuestion, int x, int y)
         {
             int result = 0;
             string textQuetionByDef = "\t\tEnter value and press [Enter]:";
             var valueByDef = "1";
             string textQstn = string.IsNullOrEmpty(textQuestion) == true ? textQuetionByDef : textQuestion;
             // Запрос на ввод значения . 
-            Console.WriteLine("\t\t\t\t{0}" , textQuestion);
+            Console.WriteLine("\t\t\t\t{0}", textQuestion);
 
+            Console.SetCursorPosition(x, y);
             var inputValue = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkGray;
             //Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -44,14 +52,22 @@ namespace Q2_Lesson_001
             return result;
         }//end_of_GetValueFromConsole
 
-        public string GetStrFromCons(string questionForEnterValue, string resultByDef , int y , int x)
+        /// <summary>
+        ///  Получить строковое   значение из консоли (ввод данных с консоли)
+        /// </summary>
+        /// <param name="questionForEnterValue"></param>
+        /// <param name="resultByDef"></param>
+        /// <param name="y"></param>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public string GetStrFromCons(string questionForEnterValue, string resultByDef, int y, int x)
         {
             string result;
             if (string.IsNullOrEmpty(questionForEnterValue) == true)
             { questionForEnterValue = "\t Enter value:"; }
-            Console.ForegroundColor = ConsoleColor.DarkGray; 
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("   " + questionForEnterValue);
-            Console.ForegroundColor = ConsoleColor.DarkGreen; 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.SetCursorPosition(y, x);
             result = Console.ReadLine(); Console.ForegroundColor = ConsoleColor.DarkGray;
 

@@ -30,11 +30,11 @@ namespace Q2_Lesson_001
             int i = 1;
             do
             {
-               
-                Console.WriteLine(question1, i);
-               Console.SetCursorPosition(52, 14);
 
-                i = io1.GetValueFromConsole("");
+                Console.WriteLine(question1, i);
+                //Console.SetCursorPosition(52, 14);
+
+                i = io1.GetValueFromConsole("", 52, 14);
 
                 switch (i)
                 {
@@ -51,16 +51,20 @@ namespace Q2_Lesson_001
                     case 3:
                         tsk3.Task003Sol();
                         break;
+
+                    default:
+                        Console.WriteLine("One or both meaning are not valid.");
+                        break;
                 }
                 if (mustExit == true) { break; }
             } while (i == 0);
         } // enf_of_Run
 
-        public void EndTask ()
+        public void EndTask()
         {
 
             int count = 5;
-            int warningCount = 2; 
+            int warningCount = 2;
             ConsWindow cw1 = new ConsWindow();
             cw1.ClearScr(count, warningCount);
             Console.Clear();
