@@ -13,8 +13,8 @@ namespace Q2_Lesson_001
             string resultUTest = "";
 
             MathLib ml1 = new MathLib();
-            ConsWindow cw1 = new ConsWindow();
-            Dispatcher d1 = new Dispatcher();
+            ConsWindow windowConsole = new ConsWindow();
+            Dispatcher dispatcherStart = new Dispatcher();
             InOut io1 = new InOut();
 
             DateTime start = new DateTime(); DateTime finish = new DateTime();
@@ -91,7 +91,7 @@ namespace Q2_Lesson_001
             // end of  Task № 003
             Console.WriteLine("\t{0} End of Task003 {0}", ConsWindow.lineDefis);
             Console.ReadKey();
-            d1.EndTask();
+            dispatcherStart.EndTask();
         }
         // for Task 001
     }

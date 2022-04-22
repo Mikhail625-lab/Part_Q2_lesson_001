@@ -6,8 +6,8 @@ namespace Q2_Lesson_001
     {
         public void Task002Sol()
         {
-            ConsWindow cw1 = new ConsWindow();
-            Dispatcher d1 = new Dispatcher();
+            ConsWindow windowConsole = new ConsWindow();
+            Dispatcher dispatcherStart = new Dispatcher();
 
             string codeSource =                 "";
             string answ = "\t\tАсимптотическая сложность :\n\t\tO(n^3) ";
@@ -15,7 +15,7 @@ namespace Q2_Lesson_001
             Console.WriteLine(answ);
             //Console.WriteLine("\t\tAnd press any key for continue ...");
             //Console.ReadKey();
-            d1.EndTask();
+            dispatcherStart.EndTask();
 
         }
 

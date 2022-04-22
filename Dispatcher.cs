@@ -18,14 +18,14 @@ namespace Q2_Lesson_001
                 "\n\t\t\t\tand press [Enter] :";
             string question2 = "\t\t\t\tOK. Your choice:[{0}]\n\t\t\t\tNow runing [Task00{0}]";
 
-            ConsWindow cw1 = new ConsWindow();
+            ConsWindow windowConsole = new ConsWindow();
             InOut io1 = new InOut();
 
             Task001 tsk1 = new Task001();
             Task002 tsk2 = new Task002();
             Task003 tsk3 = new Task003();
 
-            cw1.TaskInfo();
+            windowConsole.TaskInfo();
 
             int i = 1;
             do
@@ -65,8 +65,8 @@ namespace Q2_Lesson_001
 
             int count = 5;
             int warningCount = 2;
-            ConsWindow cw1 = new ConsWindow();
-            cw1.ClearScr(count, warningCount);
+            ConsWindow windowConsole = new ConsWindow();
+            windowConsole.ClearScr(count, warningCount);
             Console.Clear();
             this.Run("");
         } // public_void_EndTask ()

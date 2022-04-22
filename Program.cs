@@ -3,7 +3,8 @@
 ver: 4.2a date: 2021.10.27
 autor: Mikhail625@protonmail.com
 
-                Tip: for formatting Ctrl + K, а затем Ctrl + D.
+1.                Tip: for formatting Ctrl + K, а затем Ctrl + D.
+2. Удалить строку, в которой стоит курсор, можно с помощью Shift + Delete (при этом она копируется в буфер обмена).
 */
 
 /* Задания. Условия.
@@ -25,8 +26,8 @@ namespace Q2_Lesson_001
     {
         static void Main(string[] args)
         {          
-            Dispatcher d1 = new Dispatcher();
-            d1.Run("T1");
+            Dispatcher dispatcherStart = new Dispatcher();
+            dispatcherStart.Run("T1");
         } // end of Main()
     } // end of class Programm
 } // end of name of space

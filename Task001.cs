@@ -14,11 +14,11 @@ namespace Q2_Lesson_001
             string question2 = "";
             Random rnd1 = new Random();
             Console.WriteLine("");
-            ConsWindow cw1 = new ConsWindow();
+            ConsWindow windowConsole = new ConsWindow();
             InOut io1 = new InOut();
             MathLib ml1 = new MathLib();
 
-            Dispatcher d1 = new Dispatcher();
+            Dispatcher dispatcherStart = new Dispatcher();
     
             int number;
             string lineDefis = ConsWindow.lineDefis;
@@ -43,7 +43,7 @@ namespace Q2_Lesson_001
             // end of  Task № 001
             Console.WriteLine("\t{0} End of Task001 {0}", lineDefis);
             //Console.ReadKey();
-            d1.EndTask();
+            dispatcherStart.EndTask();
 
         }
 
